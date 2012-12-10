@@ -1,0 +1,16 @@
+function openModem(side)
+  if side == nil then return end
+  if peripheral.getType(side.."") == "modem" then
+        print("Opening " .. side .. " modem")
+        rednet.open(""..side)
+  end
+end
+
+function closeModem(side)
+  if side == nil then return end
+  if peripheral.getType(side.."") == "modem" then
+        print("Closing " .. side .. " modem")
+        rednet.close(""..side)
+  end
+end
+
